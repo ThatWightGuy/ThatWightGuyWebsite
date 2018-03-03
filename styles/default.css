@@ -17,10 +17,8 @@ h1{
 
 header{
 	text-align: center;
-	color: white;
 	position: relative;
 	margin: 0;
-	background-color: black;
 }
 /* generic styling */
 
@@ -29,15 +27,16 @@ header{
 }
 
 .xyz{
-	color: #2d9900;
+	color: #FFD700;
 	font-size: 10px;
 }
 
 .navigation{
 	position: relative;
+	z-index: 100;
 	width: 100vw;
 	text-align: center;
-	background-color: white;
+	background-color: black;
 }
 
 .main_navi{
@@ -55,20 +54,58 @@ header{
 
 .main_navi .mn_item a{
 	text-decoration: none;
-	color: black;
+	color: white;
 	padding: 10px 20px;
 	transition: .25s;
 }
+
 .main_navi .mn_item a:hover{
-	color: #2d9900;
+	color: #FFD700;
 }
+
 .main_navi .mn_item .nav_twitter:hover{
 	color: #1DA1F2;
 }
 
 .home_body{
 	position: relative;
-	z-index: -100;
-	width: 100%;
-	height: 700px; /*temporary*/
+	display: flex;
+	min-height: 600px; /*temporary*/
+	z-index: 0;
+	width: auto;
+	margin: 0 50px;
+}
+
+.hb_main{
+	position: relative;
+	display: flex;
+	height: inherit;
+	width: 70%;
+	background-color: white;
+	border: 1px solid black;
+	border-top: none; /*temporary*/
+}
+
+.hb_sidepanel{
+	position: relative;
+	display: flex;
+	height: inherit;
+	width: 30%;
+	background-color: white;
+	border: 1px solid black;
+	border-left: none; /*temporary*/
+	border-top: none; /*temporary*/
+}
+
+.coming_soon{
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+@media only screen
+and (min-width: 650px){
+	/* for dropdown menu */
+
 }
