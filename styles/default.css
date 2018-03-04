@@ -2,17 +2,18 @@ html{
 	position: relative;
 	margin: 0 auto;
 	min-height: 100vh;
-}
-
-body{
-	margin: 0;
+	background-color: #bcbcbc;
 	font-family: 'Roboto';
 	font-weight: 300;
 }
 
+body{
+	margin: 0;
+}
+
 h1{
-	margin: auto;
 	font-weight: 300;
+	margin: auto;
 }
 
 header{
@@ -26,41 +27,102 @@ header{
 	padding: 20px;
 }
 
-.xyz{
-	color: #FFD700;
-	font-size: 10px;
+.home_link{
+	text-decoration: none;
+	color: black;
 }
+
+.ThatWightGuy_h1{
+	transition: .25s
+}
+
+.xyz{
+	color: white;
+	font-size: 10px;
+	transition: .25s
+}
+
+.home_link:hover > .ThatWightGuy_h1{
+	color: white;
+}
+
+.home_link:hover > .xyz{
+	color: black;
+}
+
 
 .navigation{
 	position: relative;
+	display: flex;
 	z-index: 100;
-	width: 100vw;
+	width: auto;
+	margin: 0 20px;
+}
+
+.navi_left{
+	position: relative;
+	width: 75%;
 	text-align: center;
-	background-color: black;
+}
+
+.navi_right{
+	position: relative;
+	width: 25%;
+}
+
+.search{
+	display: flex;
+	text-align: center;
+	border: none;
+	margin: 0;
+	height: 100%;	
+	width: 100%;
+	border-radius: 50px;
+	box-shadow: 0 0 10px grey;
+}
+
+.s_field{
+	border: none;
+	width: 80%;
+	text-align: center;
+	border-radius: 50px 0px 0px 50px;	
+}
+
+.s_button{
+	width: 20%;
+	height: 100%;
+	border-radius: 0 50px 50px 0;
+	border: none;
+	cursor: pointer;
+	transition: .25s;
+}
+
+.s_button:hover{
+	background-color: grey;
+	color: white;
 }
 
 .main_navi{
 	padding: 0;
 	margin: 0 auto;
-	box-shadow: 0px .1px 6px black;
 }
 
 .main_navi .mn_item{
-	font-size: 16px;
+	font-size: 20px;
 	display: inline-block;
 	list-style-type: none;
-	padding: 10px 0;
+	padding: 5px 20px;
 }
 
 .main_navi .mn_item a{
-	text-decoration: none;
 	color: white;
-	padding: 10px 20px;
+	text-decoration: none;
+	padding: 20px;
 	transition: .25s;
 }
 
 .main_navi .mn_item a:hover{
-	color: #FFD700;
+	color: black;
 }
 
 .main_navi .mn_item .nav_twitter:hover{
@@ -73,28 +135,27 @@ header{
 	min-height: 600px; /*temporary*/
 	z-index: 0;
 	width: auto;
-	margin: 0 50px;
+	margin: 20px;
+	box-shadow: 0 0 10px grey;
+	border-radius: 25px;
 }
 
 .hb_main{
 	position: relative;
 	display: flex;
 	height: inherit;
-	width: 70%;
-	background-color: white;
-	border: 1px solid black;
-	border-top: none; /*temporary*/
+	width: 75%;
+	background-color: #f9f9f9;
+	border-radius: 25px 0 0 25px;
 }
 
 .hb_sidepanel{
 	position: relative;
 	display: flex;
 	height: inherit;
-	width: 30%;
+	width: 25%;
 	background-color: white;
-	border: 1px solid black;
-	border-left: none; /*temporary*/
-	border-top: none; /*temporary*/
+	border-radius: 0 25px 25px 0;
 }
 
 .coming_soon{
