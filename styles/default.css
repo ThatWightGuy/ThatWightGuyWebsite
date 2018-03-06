@@ -20,6 +20,7 @@ header{
 	text-align: center;
 	position: relative;
 	margin: 0;
+	background-color: black;
 }
 /* generic styling */
 
@@ -29,12 +30,10 @@ header{
 
 .home_link{
 	text-decoration: none;
-	color: black;
+	color: white;
+	cursor: pointer;
 }
 
-.ThatWightGuy_h1{
-	transition: .25s
-}
 
 .xyz{
 	color: white;
@@ -42,20 +41,12 @@ header{
 	transition: .25s
 }
 
-.home_link:hover > .ThatWightGuy_h1{
-	color: white;
-}
-
-.home_link:hover > .xyz{
-	color: black;
-}
-
-
 .navigation{
 	position: relative;
 	display: flex;
 	z-index: 100;
 	width: auto;
+	padding: 10px 0;
 	margin: 0 20px;
 }
 
@@ -68,6 +59,14 @@ header{
 .navi_right{
 	position: relative;
 	width: 25%;
+}
+
+.navi_main_drop{
+	color: white;
+	text-align: left;
+	display: none;
+	font-size: 20px;
+	padding: 4px 0;
 }
 
 .search{
@@ -85,6 +84,7 @@ header{
 	border: none;
 	width: 80%;
 	text-align: center;
+	padding: 10px 0; 
 	border-radius: 50px 0px 0px 50px;	
 }
 
@@ -108,22 +108,26 @@ header{
 }
 
 .main_navi .mn_item{
-	font-size: 20px;
+	font-size: 16px;
 	display: inline-block;
 	list-style-type: none;
-	padding: 5px 20px;
+	padding: 7px 20px;
+}
+
+.main_navi .mn_search{
+	display: none;
 }
 
 .main_navi .mn_item a{
 	color: white;
 	text-decoration: none;
 	padding: 20px;
-	transition: .25s;
 }
 
 .main_navi .mn_item a:hover{
-	color: black;
+	color: lightgrey;
 }
+
 
 .main_navi .mn_item .nav_twitter:hover{
 	color: #1DA1F2;
@@ -137,7 +141,6 @@ header{
 	width: auto;
 	margin: 20px;
 	box-shadow: 0 0 10px grey;
-	border-radius: 25px;
 }
 
 .hb_main{
@@ -146,7 +149,6 @@ header{
 	height: inherit;
 	width: 75%;
 	background-color: #f9f9f9;
-	border-radius: 25px 0 0 25px;
 }
 
 .hb_sidepanel{
@@ -155,7 +157,6 @@ header{
 	height: inherit;
 	width: 25%;
 	background-color: white;
-	border-radius: 0 25px 25px 0;
 }
 
 .coming_soon{
@@ -166,7 +167,85 @@ header{
 
 
 @media only screen
-and (min-width: 650px){
+and (max-width: 1286px){
 	/* for dropdown menu */
+	.main_navi .mn_item{
+		padding: 7px 15px;
+	}
+}
+
+@media only screen
+and (max-width: 1085px){
+	/* for dropdown menu */
+	.main_navi .mn_item{
+		padding: 7px 0px;
+	}
+
+	.hb_main{
+		width: 100%;
+	}
+
+	.hb_sidepanel{
+		display: none;
+	}
+}
+
+@media only screen
+and (max-width: 882px){
+	.navigation{
+		padding: 10px 0;
+		height: 33.5px;
+	}
+
+	.navi_main_drop{
+		position: absolute;
+		height: 35px;
+		color: white;
+		text-align: left;
+		display: block;
+		cursor: pointer;
+	}
+
+	.navi_main_drop:hover + .main_navi{
+		height: 215px;
+	}
+
+	.main_navi:hover{
+		height: 215px;
+	}
+
+	.main_navi{
+		position: absolute;
+		top: 43px;
+		left: -20px;
+		width: 100vw;
+		background-color: black;
+		height: 0;
+		transition: .25s;
+		overflow: hidden;
+	}
+
+	.main_navi .mn_item{
+		text-align: left;
+		display: block;
+	}
+
+	.mn_search{
+		display: block;
+	}
+
+	.navi_right{
+		display: none;
+	}
+
+	.search{
+		text-align: center;
+		height: 30px;
+	}
+
+	.s_button:hover{
+		background-color: grey;
+		color: white;
+	}
 
 }
